@@ -1,0 +1,4742 @@
+==============> cập nhập Ngày 4.12.2022 <=====================
+
+
+goto :TT1
+:Up1
+sleep 500
+touchDown 0 320 408
+sleep 100
+touchUp 0
+
+//up1 
+sleep 1000
+touchDown 0 403 348
+sleep 100
+touchUp 0
+	//Copy Phần úp 1 dán dưới đẻ úp 2 lần 
+goto :TATKHO
+
+Var #AAAAUP 0
+Var #Price12 0
+Var #SELLSHOP 2
+Var #BANLAI 0
+Var #MLAI 0
+Var #Lam 1
+Var #FULL 3159092
+Var #M -4720641
+Var #MAUSHOP 1063247
+Var #MAUSHOP2 2592200
+Var #MAUSHOP1 1062991
+Var #SHOP1 297
+Var #SHOP2 34
+Var #CLIKSHOP1 320
+Var #CLIKSHOP2 200
+Var #LamLol 50000
+Var #Cx1 -2819585
+Var #Cx2 -2754049
+Var #MAUCLIKSHOP -4466978
+Var #MAUCLIKSHOP1 -4532515
+Var #C1b 0
+Var #C1a 0
+Var #C2a 0
+Var #C2b 0
+Var #C3a 0
+Var #C3b 0
+Var #C4a 0
+Var #C4b 0
+Var #C5a 0
+Var #C5b 0
+Var #Price1 1
+Var #Price2 1
+Var #AA 10
+Var #Load1 1000
+Var #Load 1000
+Var #Tray 0
+Var #TrayQ 0
+Var #TrayD 0
+Var #BB 50
+Var #sleep 26000
+Var #Price 1
+Var #Times3 0
+Var #Times 0
+Var #Color 0
+Var #MH  10
+Var #SH  100
+Var #Color1 0
+Var #Color2 0
+Var #FFFF 100
+Var #AddD21 1
+Var #AddD 5
+Var #FriendD 5
+Var #FollowD 5
+var #Lam 1
+:Open
+set #Times 0
+RunApp ru.xomka.haydaymanager
+#Times3 = #Times3 + 1
+:manger1
+#Times = #Times + 1
+#Color = 0
+if #Times > 20
+	goto :Open
+endif
+getColor #Color 409 43
+if #Color  == -7635616
+	toast mo mangar #Times3
+	#Times = 0
+	sleep 200
+	goto :manger11
+endif
+sleep 50
+goto :manger1
+:manger11
+sleep 100
+touchDown 0 208 44
+sleep 1
+touchUp 0
+sleep 100
+touchDown 0 208 44
+sleep 1
+touchUp 0
+sleep 100
+touchDown 0 208 44
+sleep 1
+touchUp 0
+sleep 100
+touchDown 0 208 44
+sleep 1
+touchUp 0
+sleep 1000
+touchDown 0 227 95
+sleep 10
+touchUp 0
+sleep 2000
+touchDown 0 499 361
+sleep 10
+touchUp 0
+sleep 300
+touchDown 0 499 361
+sleep 10
+touchUp 0
+sleep #sleep
+set #Times 0
+:LoadingtimeA
+#Times = #Times + 1
+#Color = 0
+#Color1 = 0
+if #Times > 120
+	goto :Open
+endif
+getColor #Color 229 284
+if #Color == #M
+	#Times = 0
+	toast Lỗi
+	goto :DEL
+endif
+getColor #Color 401 17
+if #Color == #Cx1 or #Color  == #Cx2
+	toast FaceBook THỊNH NGUYỄN HAYDAY #Times3
+	goto :step1
+endif
+sleep 2000
+goto :LoadingtimeA
+:step1
+set #MLAI 0
+set #Add 0
+set #Friend 0
+set #Follow 0
+goto :Delete
+:Delete
+touchDown 0 621 618
+sleep 1
+touchUp 0
+sleep 2000
+touchDown 0 255 601
+sleep 1
+touchUp 0
+sleep 1200
+:Add
+if #Add > #AddD
+goto :Friend
+endif
+#Add = #Add + 1
+touchDown 0 428 353
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 428 353
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+touchDown 0 428 353
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 428 353
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+touchDown 0 428 353
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 428 353
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+goto :Add
+:Friend
+if #Friend > #FriendD
+goto :ADD
+endif
+#Friend = #Friend + 1
+touchDown 0 274 201
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 274 201
+sleep 1
+touchUp 0
+sleep 1
+sleep 100
+touchDown 0 411 297
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 411 297
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+touchDown 0 411 341
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 411 341
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+touchDown 0 415 379
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 415 379
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+touchDown 0 415 419
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 415 419
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+touchDown 0 414 458
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 414 458
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+goto :Friend
+
+:Follow
+if #Follow > #FollowD
+goto :ADD
+endif
+#Follow = #Follow + 1
+touchDown 0 465 203
+sleep 1
+touchUp 0
+sleep 100
+touchDown 0 411 278
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 411 278
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+touchDown 0 411 321
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 411 321
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+touchDown 0 410 360
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 410 360
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+touchDown 0 410 401
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 410 401
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+touchDown 0 410 443
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 410 443
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+goto :Follow
+:ADD
+//add fr
+sleep 1000
+touchDown 0 182 199
+sleep 1
+touchUp 0
+sleep 1000
+touchDown 0 202 234
+sleep 1
+touchUp 0
+sleep 1000
+goto :Key1
+:Key11
+//add
+sleep 1000
+touchDown 0 438 233
+sleep 1
+touchUp 0
+sleep 300
+touchDown 0 438 233
+sleep 1
+touchUp 0
+touchDown 0 438 233
+sleep 1
+touchUp 0
+touchDown 0 438 233
+sleep 1
+touchUp 0
+touchDown 0 438 233
+sleep 1
+touchUp 0
+
+set #Times 0
+:Loadingtime66d
+#Times = #Times + 1
+#Color = 0
+if #Times > 30
+	goto :Open
+endif
+getColor #Color 446 311
+if #Color  == -2754049
+	toast ADD #Times3
+	#Times = 0
+	sleep 500
+	goto :step66d
+endif
+sleep 700
+goto :Loadingtime66d
+:step66d
+sleep 1000
+touchDown 0 414 309
+sleep 1
+touchUp 0
+sleep 300
+touchDown 0 414 309
+sleep 1
+touchUp 0
+sleep 1000
+touchDown 0 615 539
+sleep 1
+touchUp 0
+sleep 50
+touchDown 0 616 539
+sleep 1
+touchUp 0
+sleep 500
+:Open2
+
+sleep 1500
+#AA = 2
+RunApp com.supercell.hayday1
+sleep 500
+
+sleep 300 
+touchDown 0 551 11
+sleep 1
+touchUp 0
+sleep 300 
+touchDown 0 551 11
+sleep 1
+touchUp 0
+touchDown 0 551 11
+sleep 1
+touchUp 0
+touchDown 0 551 11
+sleep 1
+touchUp 0
+touchDown 0 551 11
+sleep 1
+touchUp 0
+sleep 500
+
+set #Times 0
+:Loadingtime2998
+#Times = #Times + 1
+#Color = 0
+if #Times > 120
+	goto :TT1
+endif
+getColor #Color #SHOP1 #SHOP2
+if #Color == #MAUSHOP or #Color == #MAUSHOP1 or #Color == #MAUSHOP2
+	toast Về Nhà :D
+	#Times = 0
+	goto :VENHA
+endif
+getColor #Color 401 17
+if #Color == #Cx1 or #Color  == #Cx2
+	toast FaceBook THỊNH NGUYỄN HAYDAY #Times3
+	#Times = 0
+	sleep 300
+	goto :step2
+endif
+sleep 1500
+touchDown 0 551 11
+sleep 1
+touchUp 0
+sleep 100
+goto :Loadingtime2998
+:VENHA
+sleep 300
+touchDown 0 32 606
+sleep 50
+touchUp 0
+touchDown 0 32 606
+sleep 50
+touchUp 0
+touchDown 0 32 606
+sleep 50
+touchUp 0
+sleep 700
+goto :Open2
+:step2
+
+set #Friend1 0
+set #Follow1 0
+goto :Delete1
+:Delete1
+touchDown 0 621 618
+sleep 1
+touchUp 0
+sleep 2000
+touchDown 0 255 601
+sleep 1
+touchUp 0
+sleep 1200
+
+:Friend1
+if #Friend1 > #FriendD
+goto :ADD1
+endif
+#Friend1 = #Friend1 + 1
+touchDown 0 274 201
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 274 201
+sleep 1
+touchUp 0
+sleep 1
+sleep 100
+touchDown 0 411 297
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 411 297
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+touchDown 0 411 341
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 411 341
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+touchDown 0 415 379
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 415 379
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+touchDown 0 415 419
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 415 419
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+touchDown 0 414 458
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 414 458
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+goto :Friend1
+
+:Follow1
+if #Follow1 > #FollowD
+goto :ADD1
+endif
+#Follow1 = #Follow1 + 1
+touchDown 0 465 203
+sleep 1
+touchUp 0
+sleep 100
+touchDown 0 411 278
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 411 278
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+touchDown 0 411 321
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 411 321
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+touchDown 0 410 360
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 410 360
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+touchDown 0 410 401
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 410 401
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+touchDown 0 410 443
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 410 443
+sleep 1
+touchUp 0
+sleep 1
+sleep 50
+goto :Follow1
+:ADD1
+//add fr
+sleep 1000
+touchDown 0 182 199
+sleep 1
+touchUp 0
+touchDown 0 182 199
+sleep 1
+touchUp 0
+sleep 500
+
+set #Times 0
+:Loadingtime891
+#Times = #Times + 1
+#Color = 0
+if #Times > 15
+	goto :TT1
+endif
+getColor #Color 428 353
+if #Color  == 1989104
+	toast ADD
+	#Times = 0
+	sleep 1000
+	goto :step891
+endif
+sleep 2000
+goto :Loadingtime891
+:step891
+
+//dong y
+sleep 1000
+touchDown 0 390 348
+sleep 1
+touchUp 0
+sleep 100
+touchDown 0 390 348
+sleep 2
+touchUp 0
+touchDown 0 390 348
+sleep 2
+touchUp 0
+
+sleep 1000
+touchDown 0 615 539
+sleep 1
+touchUp 0
+sleep 1000
+touchDown 0 616 539
+sleep 3
+touchUp 0
+sleep 300
+
+//keo zoom
+
+touchDown 0 551 11
+sleep 1
+touchUp 0
+touchDown 0 551 11
+sleep 1
+touchUp 0
+touchDown 0 551 11
+sleep 1
+touchUp 0
+touchDown 0 551 11
+sleep 1
+touchUp 0
+:SSSS1
+:checkshopdone
+sleep 300
+touchDown 0 77 73
+sleep 40
+touchMove 0 1000 1000
+sleep 100
+touchUp 0
+sleep 200
+
+//clickshop
+sleep 300
+touchDown 0 4 258
+sleep 100
+touchUp 0
+sleep 100
+sleep 200
+
+set #Color 0
+set #Times 0
+#Times = #Times + 1
+if #Times > 10
+	goto :Open
+endif
+getColor #Color #CLIKSHOP1 #CLIKSHOP2
+if #Color  == #MAUCLIKSHOP or #Color  == #MAUCLIKSHOP1
+	toast Mở shop
+	sleep 200
+	goto :shopdone 
+endif
+sleep 1000
+goto :checkshopdone
+:shopdone
+
+//ban10 xeng
+
+//keo shop
+sleep 3
+touchDown  0 476 426
+sleep 500
+touchMove 0 -135 426
+sleep 800
+touchUp 0
+//S1
+sleep 1000
+touchDown 0 190 305
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 190 305
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 129 305
+sleep 10
+touchUp 0
+touchDown 0 129 305
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 129 305
+sleep 10
+touchUp 0
+sleep 100
+touchDown 0 200 254
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+sleep 30
+touchDown 0 418 430
+sleep 0
+touchUp 0
+touchDown 0 445 206
+sleep 1
+touchUp 0
+touchDown 0 445 206
+sleep 1
+touchUp 0
+touchDown 0 445 206
+sleep 1
+touchUp 0
+touchDown 0 445 206
+sleep 1
+touchUp 0
+:CHECK89
+// check 89 barn
+ sleep 1000
+getColor #C1a 200 325
+getColor #C1b  200 400
+
+getColor #C2a  265 325
+getColor #C2b  265 400
+
+getColor #C3a  335 325
+getColor #C3b  335 400
+
+getColor #C4a  400 325
+getColor #C4b  400 400
+
+getColor #C5a  465 325
+getColor #C5b  465 400
+if #C1a != #M or #C1b != #M or #C2a != #M or #C2b != #M or #C3a != #M or #C3b != #M or #C4a != #M or #C4b != #M or #C5a != #M or #C5b != #M
+	Toast Bán lại
+	
+	goto :BANLAI
+else
+	Toast Đủ 89 BARN
+	goto :NextPage
+endif
+
+:NextPage
+sleep #SH
+touchDown 0 561 188
+sleep 0
+touchUp 0
+touchDown 0 561 188
+sleep 0
+touchUp 0
+sleep 200
+
+:SSSS
+:checkshopdone1
+//clickshop
+sleep 300
+touchDown 0 4 258
+sleep 100
+touchUp 0
+sleep 100
+sleep 200
+:shop123
+set #Color 0
+set #Times 0
+#Times = #Times + 1
+if #Times > 20
+	toast Lỗi không mở được shop
+	goto :end
+endif
+getColor #Color #CLIKSHOP1 #CLIKSHOP2
+if #Color  == #MAUCLIKSHOP or #Color  == #MAUCLIKSHOP1
+	toast Mở shop
+	sleep 200
+	goto :shopdone1
+endif
+sleep 1000
+goto :checkshopdone1
+:shopdone1
+
+
+//ban80 xeng
+//S1
+touchDown 0 188 294
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 188 294
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 129 305
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 254
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 370 261
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+sleep 30
+touchDown 0 418 430
+sleep 50
+touchUp 0
+
+
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+//S2
+touchDown 0 185 368
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 185 368
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 254
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+sleep 30
+touchDown 0 418 430
+sleep 50
+touchUp 0
+sleep #SH
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+//S3
+touchDown 0 258 294
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 258 294
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 254
+sleep 10
+touchUp 0
+
+
+
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+sleep 30
+touchDown 0 418 430
+sleep 50
+touchUp 0
+sleep #SH
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+//S4
+touchDown 0 253 372
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 253 372
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 254
+sleep 10
+touchUp 0
+
+
+
+
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+sleep 30
+touchDown 0 418 430
+sleep 50
+touchUp 0
+sleep #SH
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+//S5
+touchDown 0 320 296
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 320 296
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 254
+sleep 10
+touchUp 0
+
+
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+sleep 30
+touchDown 0 418 430
+sleep 50
+touchUp 0
+sleep #SH
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+//S6
+touchDown 0 318 375
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 318 375
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 254
+sleep 10
+touchUp 0
+
+
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+sleep 30
+touchDown 0 418 430
+sleep 50
+touchUp 0
+sleep #SH
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+//S7
+touchDown 0 389 293
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 389 293
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 254
+sleep 10
+touchUp 0
+
+
+
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+sleep 30
+touchDown 0 418 430
+sleep 50
+touchUp 0
+sleep #SH
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+//S8
+touchDown 0 364 361
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 364 361
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 254
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 370 261
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+sleep 30
+touchDown 0 418 430
+sleep 50
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+//S9
+touchDown 0 445 305
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 445 305
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 254
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 418 430
+sleep 0
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+//S10
+touchDown 0 450 375
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 450 375
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 254
+sleep 10
+touchUp 0
+sleep 100
+
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 418 430
+sleep 0
+touchUp 0
+sleep #SH
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+//S11
+touchDown 0 484 314
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 484 314
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 254
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 418 430
+sleep 0
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+//S12
+touchDown 0 484 391
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 484 391
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 254
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 418 430
+sleep 0
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+sleep 500
+:Open1a
+set #Times 0
+sleep 500
+#AA = 2
+RunApp com.supercell.hayday2
+sleep 1000
+
+:Loadingtime3
+#Times = #Times + 1
+#Color = 0
+if #Times > 30
+	goto :Open
+endif
+getColor #Color #SHOP1 #SHOP2
+if #Color == #MAUSHOP or #Color == #MAUSHOP1
+	toast Qua Ok :D
+	#Times = 0
+	goto :ok1
+endif
+getColor #Color 401 17
+if #Color == #Cx1 or #Color == #Cx2
+	toast OK!!
+	#Times = 0
+	sleep 500
+	goto :step3
+endif
+getColor #Color #CLIKSHOP1 #CLIKSHOP2
+if #Color  == #MAUCLIKSHOP or #Color  == #MAUCLIKSHOP1
+	toast Mở shop
+	sleep 200
+	goto :shopdone2
+endif
+sleep 2000
+goto :Loadingtime3
+:step3
+set #AAAAUP 0
+
+set #Times 0
+:checkshopdone2
+touchDown 0 551 11
+sleep 1
+touchUp 0
+touchDown 0 551 11
+sleep 1
+touchUp 0
+touchDown 0 551 11
+sleep 1
+touchUp 0
+touchDown 0 551 11
+sleep 1
+touchUp 0
+
+sleep 300
+touchDown 0 77 73
+sleep 40
+touchMove 0 1000 1000
+sleep 100
+touchUp 0
+sleep 200
+
+//clickshop
+sleep 300
+touchDown 0 4 258
+sleep 100
+touchUp 0
+touchDown 0 4 258
+sleep 100
+touchUp 0
+sleep 100
+sleep 200
+
+set #Color 0
+
+#Times = #Times + 1
+if #Times > 18
+	toast Lỗi không mở được shop
+	goto :end
+endif
+getColor #Color #CLIKSHOP1 #CLIKSHOP2
+if #Color  == #MAUCLIKSHOP or #Color  == #MAUCLIKSHOP1
+	toast Mở shop
+	sleep 200
+	goto :shopdone2
+endif
+sleep 2000
+goto :checkshopdone2
+:shopdone2
+
+set #Times 0
+:checkgreg
+#Times = #Times + 1
+#Color = 0
+if #Times == 5 or #Times == 10
+	touchDown 0 320 200
+	sleep 1
+	touchUp 0
+	sleep 80
+elseif #Times == 40
+	toast Lỗi
+	goto :Open
+endif
+getRGB #red1 #green1 #blue1 145 210
+if #red1 > 195 and #red1 < 210
+	toast Sang Trái
+    sleep 100
+    touchDown 0 145 210
+    sleep 1
+    touchUp 0
+    sleep 200
+    touchDown 0 145 210
+    sleep 1
+    touchUp 0
+	goto :checkgregdone
+endif
+getRGB #red1 #green1 #blue1 500 210
+if #red1 > 195 and #red1 < 210
+    toast Sang Phải
+    sleep 100
+    touchDown 0 500 210
+    sleep 1
+    touchUp 0
+    sleep 200
+    touchDown 0 500 210
+    sleep 1
+    touchUp 0
+	goto :checkgregdone
+endif
+sleep 1000
+goto :checkgreg
+:checkgregdone
+
+set #Times 0
+:quamua1
+#Times = #Times + 1
+#Color = 0
+#Color1 = 0
+if #Times > 30
+	goto :Open
+endif
+getColor #Color #SHOP1 #SHOP2
+if #Color == #MAUSHOP or #Color == #MAUSHOP1
+	toast Qua Ok :D
+	#Times = 0
+	goto :ok1
+endif
+sleep 500
+goto :quamua1
+:ok1
+//mua 80
+if #SELLSHOP == 1
+//////////////////////////
+touchDown 0 175 299
+sleep 9
+touchUp 0
+sleep 10
+touchDown 0 181 374
+sleep 1
+touchUp 0
+sleep 10
+touchDown 0 243 304
+sleep 1
+touchUp 0
+sleep 10
+touchDown 0 252 379
+sleep 1
+touchUp 0
+sleep 10
+touchDown 0 310 303
+sleep 1
+touchUp 0
+sleep 10
+touchDown 0 320 379
+sleep 1
+touchUp 0
+sleep 10
+touchDown 0 375 299
+sleep 1
+touchUp 0
+sleep 10
+touchDown 0 375 375
+sleep 1
+touchUp 0
+sleep 10
+touchDown 0 512 285
+sleep 1
+touchUp 0
+sleep 10
+sleep 50
+elseif #SELLSHOP == 2
+sleep 50
+touchDown 0 175 299
+sleep 9
+touchUp 0
+sleep 20
+touchDown 0 181 374
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 243 304
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 252 379
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 310 303
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 320 379
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 375 299
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 375 375
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 442 304
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 444 379
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 512 285
+sleep 1
+touchUp 0
+/////////////////
+endif
+sleep 500
+set #Times 0
+
+:fullkho1
+#Times = #Times + 1
+#Color = 0
+#Color1 = 0
+if #Times > 10
+	goto :AAAA
+endif
+sleep 1000
+getColor #Color 17 17
+if #Color == 8122364
+	toast MLai
+	goto :MLAI
+endif
+sleep 1000
+getColor #Color 275 295
+if #Color == 3175353
+	toast TOang!!!!!!!!!!!!
+	goto :AAAA
+endif
+sleep 1000
+getColor #Color 235 325
+if #Color == #FULL
+	toast FULL KhO
+	goto :full1
+endif
+sleep 5000
+getColor #Color 562 187
+if #Color == 1989360
+	#Times = 0
+	toast TOang!!!!!!!!!!!! Thêm Nữa
+	goto :AAAA123
+endif
+sleep 1000
+goto :fullkho1
+:full1
+//go home
+sleep 300
+touchDown 0 562 189
+sleep 10
+touchUp 0
+sleep 10
+touchDown 0 562 189
+sleep 1
+touchUp 0
+sleep 10
+sleep 700
+sleep 300
+touchDown 0 32 606
+sleep 50
+touchUp 0
+touchDown 0 32 606
+sleep 50
+touchUp 0
+touchDown 0 32 606
+sleep 50
+touchUp 0
+sleep 700
+
+:ADAA
+set #Times 0
+:Loadingtime411
+#Times = #Times + 1
+#Color = 0
+if #Times > 40
+	goto :Open
+endif
+getColor #Color 401 17
+if #Color == #Cx1 or #Color  == #Cx2
+	toast OK!!
+	sleep 500
+	goto :step411
+endif
+sleep 2000
+goto :Loadingtime411
+:step411
+:checkshopdone3
+//keo zoom
+sleep 300
+touchDown 0 77 73
+sleep 40
+touchMove 0 1000 1000
+sleep 100
+touchUp 0
+sleep 200
+sleep 300
+touchDown 0 77 73
+sleep 40
+touchMove 0 1000 1000
+sleep 100
+touchUp 0
+sleep 200
+
+//clickshop
+sleep 300
+touchDown 0 4 258
+sleep 100
+touchUp 0
+sleep 100
+sleep 200
+
+set #Color 0
+set #Times 0
+#Times = #Times + 1
+if #Times > 18
+	toast Lỗi không mở được shop
+	goto :end
+endif
+getColor #Color #CLIKSHOP1 #CLIKSHOP2
+if #Color  == #MAUCLIKSHOP or #Color  == #MAUCLIKSHOP1
+	sleep 200
+	goto :shopdone3
+endif
+sleep 1000
+goto :checkshopdone3
+:shopdone3
+
+
+//ban10 xeng
+//S9
+sleep 1000
+touchDown 0 444 297
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 444 297
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 129 305
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 129 305
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 129 305
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 254
+sleep 10
+touchUp 0
+sleep 30
+touchDown 0 466 259
+sleep 10
+touchUp 0
+touchDown 0 466 259
+sleep 10
+touchUp 0
+touchDown 0 466 259
+sleep 10
+touchUp 0
+touchDown 0 466 259
+sleep 10
+touchUp 0
+touchDown 0 466 259
+sleep 10
+touchUp 0
+sleep 10
+
+sleep 50
+if #Price12 == 1
+touchDown 0 398 325
+sleep #AA
+touchUp 0
+sleep 50
+elseif #Price12 == 2
+touchDown 0 438 328
+sleep #AA
+touchUp 0
+sleep 50
+endif
+touchDown 0 412 433
+sleep #AA
+touchUp 0
+sleep 50
+touchDown 0 514 289
+sleep #AA
+touchUp 0
+sleep #BB
+touchDown 0 514 289
+sleep #AA
+touchUp 0
+sleep #BB
+
+set #Times 0
+:checkgreg1
+#Times = #Times + 1
+#Color = 0
+if #Times == 5 or #Times == 10
+	touchDown 0 320 200
+	sleep 1
+	touchUp 0
+	sleep 80
+elseif #Times == 40
+	toast Lỗi
+	goto :Open
+endif
+getRGB #red1 #green1 #blue1 145 210
+if #red1 > 195 and #red1 < 210
+	toast Sang Trái
+    sleep 100
+    touchDown 0 145 210
+    sleep 1
+    touchUp 0
+    sleep 200
+    touchDown 0 145 210
+    sleep 1
+    touchUp 0
+	goto :checkgregdone1
+endif
+getRGB #red1 #green1 #blue1 500 210
+if #red1 > 195 and #red1 < 210
+    toast Sang Phải
+    sleep 100
+    touchDown 0 500 210
+    sleep 1
+    touchUp 0
+    sleep 200
+    touchDown 0 500 210
+    sleep 1
+    touchUp 0
+	goto :checkgregdone1
+endif
+sleep 1000
+goto :checkgreg1
+:checkgregdone1
+
+
+set #Times 0
+:LoadingtimeF11
+#Times = #Times + 1
+#Color = 0
+if #Times > 30
+	goto :Open
+endif
+getColor #Color #SHOP1 #SHOP2
+if #Color == #MAUSHOP or #Color == #MAUSHOP1
+	toast Qua Ok :D
+	sleep 500
+	goto :step611
+endif
+sleep 500
+goto :LoadingtimeF11
+:step611
+//keo shop
+sleep 30
+touchDown  0 476 426
+sleep 500
+touchMove 0 -100 426
+sleep 800
+touchUp 0
+//mua 89 BARN
+sleep 1000
+///////////////
+touchDown 0 200 290
+sleep 1
+touchUp 0
+sleep 10
+touchDown 0 200 370
+sleep 10
+touchUp 0
+sleep 10
+touchDown 0 265 290
+sleep 1
+touchUp 0
+sleep 10
+touchDown 0 265 370
+sleep 1
+touchUp 0
+sleep 10
+touchDown 0 335 290
+sleep 1
+touchUp 0
+sleep 10
+touchDown 0 335 370
+sleep 1
+touchUp 0
+sleep 10
+touchDown 0 400 290
+sleep 1
+touchUp 0
+sleep 10
+touchDown 0 400 370
+sleep 1
+touchUp 0
+sleep 10
+touchDown 0 470 290
+sleep 1
+touchUp 0
+sleep 10
+touchDown 0 459 375
+sleep 1
+touchUp 0
+sleep 10
+sleep 500
+
+set #Times 0
+:Loadingtime41c
+#Times = #Times + 1
+#Color = 0
+if #Times > 6
+	toast Toang!!!!!
+	goto :AAAA1
+	
+endif
+sleep 1000
+getColor #Color 17 17
+if #Color  == 8122364
+	#Times = 0
+	toast Toang!!!!!
+	goto :AAAA1
+endif
+sleep 1000
+getColor #Color 235 325
+if #Color  == #M
+	#Times = 0
+	sleep 1000
+	toast FULL 80 BARM
+	goto :Open2a
+elseif #Color == #FULL
+	toast TẮT ĐẦY KHO
+	#Times = 0
+	sleep 500
+	goto :step41c
+endif
+sleep 1000
+getColor #Color 275 295
+if #Color == 3175353
+	#Times = 0
+	toast TOang!!!!!!!!!!!!
+	goto :AAAA1
+endif
+sleep 5000
+getColor #Color 440 408
+if #Color == 6209772
+	#Times = 0
+	toast lỖI k mUA dC 89 bARN
+	goto :AAAA1
+endif
+sleep 1000
+goto :Loadingtime41c
+:step41c
+
+//go home
+sleep 300
+touchDown 0 562 189
+sleep 10
+touchUp 0
+sleep 10
+touchDown 0 562 189
+sleep 1
+touchUp 0
+sleep 10
+sleep 700
+sleep 300
+touchDown 0 32 606
+sleep 50
+touchUp 0
+touchDown 0 32 606
+sleep 50
+touchUp 0
+touchDown 0 32 606
+sleep 50
+touchUp 0
+sleep 700
+:Loadingtime41
+#Times = #Times + 1
+#Color = 0
+if #Times > 40
+	goto :Open
+endif
+getColor #Color 401 17
+if #Color == #Cx1 or #Color  == #Cx2
+	toast ve nha
+	#Times = 0
+	sleep 500
+	goto :step41
+endif
+goto :Loadingtime41
+:step41
+
+:checkshopdone4
+touchDown 0 77 73
+sleep 40
+touchMove 0 1000 1000
+sleep 100
+touchUp 0
+sleep 200
+
+//clickshop
+sleep 300
+touchDown 0 4 258
+sleep 100
+touchUp 0
+touchDown 0 4 258
+sleep 100
+touchUp 0
+sleep 100
+sleep 200
+
+set #Color 0
+set #Times 0
+#Times = #Times + 1
+if #Times > 18
+	toast Lỗi không mở được shop
+	goto :checkshopdone4
+endif
+getColor #Color #CLIKSHOP1 #CLIKSHOP2
+if #Color  == #MAUCLIKSHOP or #Color  == #MAUCLIKSHOP1
+	sleep 200
+	goto :shopdone4
+endif
+sleep 1000
+goto :checkshopdone4
+:shopdone4
+
+goto :Tray
+:Tray
+touchDown 0 460 204
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 460 204
+sleep #AA
+touchUp 0
+sleep #BB
+if #Tray == 0
+goto :Tray0
+elseif #Tray == 1
+goto :Tray1
+elseif #Tray == 2
+goto :Tray2
+elseif #Tray == 3
+goto :Tray3
+elseif #Tray == 4
+goto :Tray4
+elseif #Tray == 5
+goto :Tray5
+elseif #Tray == 6
+goto :Tray6
+elseif #Tray == 7
+goto :Tray7
+elseif #Tray == 8
+goto :Tray8
+elseif #Tray == 9
+goto :Tray9
+elseif #Tray == 10
+goto :Tray10
+elseif #Tray == 11
+goto :Tray11
+endif
+set #Tray 0
+goto :XANGTRAI
+:Put
+sleep #BB
+touchDown 0 132 315
+sleep 1
+touchUp 0
+sleep 1
+//Local
+sleep #BB
+touchDown 0 200 255
+sleep #AA
+touchUp 0
+sleep #BB
+touchDown 0 460 268
+sleep 1
+touchUp 0
+touchDown 0 460 268
+sleep 1
+touchUp 0
+touchDown 0 460 268
+sleep 1
+touchUp 0
+touchDown 0 460 268
+sleep 1
+touchUp 0
+touchDown 0 460 268
+sleep 1
+touchUp 0
+
+sleep 50
+if #Price2 == 1
+touchDown 0 398 325
+sleep #AA
+touchUp 0
+sleep 50
+elseif #Price2 == 2
+touchDown 0 438 328
+sleep #AA
+touchUp 0
+sleep 50
+endif
+touchDown 0 412 433
+sleep #AA
+touchUp 0
+sleep 50
+touchDown 0 514 289
+sleep #AA
+touchUp 0
+sleep #BB
+touchDown 0 514 289
+sleep #AA
+touchUp 0
+sleep #BB
+
+
+goto :Tray
+:Tray0
+#Tray = #Tray + 1
+touchDown 0 444 381
+sleep #AA
+touchUp 0
+sleep #BB
+touchDown 0 444 381
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put
+:Tray1
+#Tray = #Tray + 1
+touchDown 0 377 358
+sleep #AA
+touchUp 0
+sleep #AA
+touchDown 0 377 358
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put
+:Tray2
+#Tray = #Tray + 1
+touchDown 0 311 377
+sleep #AA
+touchUp 0
+sleep #AA
+touchDown 0 311 377
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put
+:Tray3
+#Tray = #Tray + 1
+touchDown 0 245 377
+sleep #AA
+touchUp 0
+sleep #AA
+touchDown 0 245 377
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put
+:Tray4
+#Tray = #Tray + 1
+touchDown 0 175 377
+sleep #AA
+touchUp 0
+sleep #AA
+touchDown 0 175 377
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put
+:Tray5
+#Tray = #Tray + 1
+touchDown 0 175 306
+sleep #AA
+touchUp 0
+sleep #AA
+touchDown 0 175 306
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put
+:Tray6
+#Tray = #Tray + 1
+touchDown 0 244 307
+sleep #AA
+touchUp 0
+sleep #AA
+touchDown 0 244 307
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put
+:Tray7
+#Tray = #Tray + 1
+touchDown 0 310 308
+sleep #AA
+touchUp 0
+sleep #AA
+touchDown 0 310 308
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put
+:Tray8
+#Tray = #Tray + 1
+touchDown 0 379 308
+sleep #AA
+touchUp 0
+sleep #AA
+touchDown 0 379 308
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put
+:Tray9
+#Tray = #Tray + 1
+touchDown 0 444 306
+sleep #AA
+touchUp 0
+sleep #AA
+touchDown 0 444 306
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put
+
+:Tray10
+#Tray = #Tray + 1
+touchDown 0 484 314
+sleep #AA
+touchUp 0
+sleep #AA
+touchDown 0 484 314
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put
+
+:Tray11
+#Tray = #Tray + 1
+touchDown 0 484 391
+sleep #AA
+touchUp 0
+sleep #AA
+touchDown 0 484 391
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put
+
+
+:XANGTRAI
+set #Times 0
+:checkgreg2
+#Times = #Times + 1
+#Color = 0
+if #Times == 5 or #Times == 10
+	touchDown 0 320 200
+	sleep 1
+	touchUp 0
+	sleep 80
+elseif #Times == 40
+	toast Lỗi
+	goto :Open
+endif
+getRGB #red1 #green1 #blue1 145 210
+if #red1 > 195 and #red1 < 210
+	toast Sang Trái
+    sleep 100
+    touchDown 0 145 210
+    sleep 1
+    touchUp 0
+    sleep 200
+    touchDown 0 145 210
+    sleep 1
+    touchUp 0
+	goto :checkgregdone2
+endif
+getRGB #red1 #green1 #blue1 500 210
+if #red1 > 195 and #red1 < 210
+    toast Sang Phải
+    sleep 100
+    touchDown 0 500 210
+    sleep 1
+    touchUp 0
+    sleep 200
+    touchDown 0 500 210
+    sleep 1
+    touchUp 0
+	goto :checkgregdone2
+endif
+sleep 1000
+goto :checkgreg2
+:checkgregdone2
+
+set #Times 0
+:LoadingtimeF1
+#Times = #Times + 1
+#Color = 0
+if #Times > 40
+	goto :Open
+endif
+getColor #Color #SHOP1 #SHOP2
+if #Color == #MAUSHOP or #Color == #MAUSHOP1
+	toast Qua Ok :D
+           #Times = 0
+	goto :step61
+endif
+sleep 300
+goto :LoadingtimeF1
+:step61
+//keo shop
+sleep 50
+touchDown  0 476 426
+sleep 500
+touchMove 0 -100 426
+sleep 800
+touchUp 0
+//mua 89 BARN
+sleep 1000
+
+touchDown 0 200 290
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 200 370
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 265 290
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 265 370
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 335 290
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 335 370
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 400 290
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 400 370
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 470 290
+sleep 1
+touchUp 0
+touchDown 0 459 375
+sleep 1
+touchUp 0
+sleep 500
+
+set #Times 0
+:LoadingtimeAdd
+#Times = #Times + 1
+#Color = 0
+#Color1 = 0
+if #Times > 5
+	goto :AAAA1
+endif
+sleep 2000
+getColor #Color 235 325
+if #Color  == #FULL
+	#Times = 0
+	sleep 1000
+	toast Full kho
+	goto :Up1
+elseif #Color  == #M
+	#Times = 0
+	sleep 1000
+	toast FULL 80 BARM
+	goto :Open2a
+endif
+sleep 2000
+getColor #Color 440 408
+if #Color == -4013373
+	#Times = 0
+    toast Het Barmmmmmmmmmm
+	goto :Open2a
+endif
+sleep 1000
+goto :LoadingtimeAdd
+set #Add21 0
+
+
+:TATKHO
+//tat kho
+sleep 300
+touchDown 0 448 243
+sleep 1
+touchUp 0
+
+:checkshopdone5
+sleep 300
+touchDown 0 77 73
+sleep 40
+touchMove 0 1000 1000
+sleep 100
+touchUp 0
+sleep 200
+sleep 300
+touchDown 0 77 73
+sleep 40
+touchMove 0 1000 1000
+sleep 100
+touchUp 0
+sleep 200
+
+//clickshop
+sleep 300
+touchDown 0 4 258
+sleep 100
+touchUp 0
+sleep 100
+sleep 200
+
+set #Color 0
+set #Times 0
+#Times = #Times + 1
+if #Times > 18
+	toast Lỗi không mở được shop
+	goto :end
+endif
+getColor #Color #CLIKSHOP1 #CLIKSHOP2
+if #Color  == #MAUCLIKSHOP or #Color  == #MAUCLIKSHOP1
+	toast Mở Shop	
+	sleep 200
+	goto :LoadingtimeF1
+endif
+sleep 1000
+goto :checkshopdone5
+
+:Open2a
+
+
+
+//go home
+sleep 300
+touchDown 0 562 189
+sleep 10
+touchUp 0
+sleep 10
+touchDown 0 562 189
+sleep 1
+touchUp 0
+sleep 10
+sleep 700
+sleep 300
+touchDown 0 32 606
+sleep 50
+touchUp 0
+touchDown 0 32 606
+sleep 50
+touchUp 0
+touchDown 0 32 606
+sleep 50
+touchUp 0
+sleep 700
+
+sleep 200
+set #Times 0
+:Loadingtime299821
+#Times = #Times + 1
+#Color = 0
+if #Times > 30
+	goto :Open
+endif
+getColor #Color 401 17
+if #Color == #Cx1 or #Color  == #Cx2
+	toast FaceBook THỊNH NGUYỄN HAYDAY
+	#Times = 0
+	sleep 300
+	goto :step2221
+endif
+sleep 1500
+goto :Loadingtime299821
+:step2221
+
+set #Times 0
+sleep 1500
+#AA = 2
+RunApp com.supercell.hayday1
+toast Hayday1
+sleep 300 
+
+set #Times 0
+:Loadingtime3z54
+#Times = #Times + 1
+#Color = 0
+if #Times > 20
+	goto :MG2
+endif
+getColor #Color #CLIKSHOP1 #CLIKSHOP2
+if #Color  == #MAUCLIKSHOP or #Color  == #MAUCLIKSHOP1
+	toast Mở Shop	
+	sleep 200
+	goto :shopdone6
+endif
+getColor #Color 401 17
+if #Color == #Cx1 or #Color  == #Cx2
+	toast vao xong
+	#Times = 0
+	sleep 300
+	goto :step3z45
+endif 
+sleep 1500
+
+goto :Loadingtime3z54
+:step3z45
+
+:checkshopdone6
+sleep 100
+touchDown 0 77 73
+sleep 40
+touchMove 0 1000 1000
+sleep 100
+touchUp 0
+sleep 200
+
+//clickshop
+sleep 100
+touchDown 0 4 258
+sleep 100
+touchUp 0
+touchDown 0 4 258
+sleep 100
+touchUp 0
+sleep 100
+sleep 200
+
+set #Color 0
+set #Times 0
+#Times = #Times + 1
+if #Times > 18
+	toast Lỗi không mở được shop
+	goto :checkshopdone6
+endif
+getColor #Color #CLIKSHOP1 #CLIKSHOP2
+if #Color  == #MAUCLIKSHOP or #Color  == #MAUCLIKSHOP1
+	toast Mở Shop	
+	sleep 200
+	goto :shopdone6
+endif
+sleep 1000
+goto :checkshopdone6
+:shopdone6
+
+:SP
+set #Times 0
+:checkgreg4
+#Times = #Times + 1
+#Color = 0
+if #Times == 5 or #Times == 10
+	touchDown 0 320 200
+	sleep 1
+	touchUp 0
+	sleep 80
+elseif #Times == 40
+	toast Lỗi
+	goto :Open
+endif
+getRGB #red1 #green1 #blue1 145 210
+if #red1 > 195 and #red1 < 210
+	toast Sang Trái
+    sleep 100
+    touchDown 0 145 210
+    sleep 1
+    touchUp 0
+    sleep 200
+    touchDown 0 145 210
+    sleep 1
+    touchUp 0
+	goto :checkgregdone4
+endif
+getRGB #red1 #green1 #blue1 500 210
+if #red1 > 195 and #red1 < 210
+    toast Sang Phải
+    sleep 100
+    touchDown 0 500 210
+    sleep 1
+    touchUp 0
+    sleep 200
+    touchDown 0 500 210
+    sleep 1
+    touchUp 0
+	goto :checkgregdone4
+endif
+sleep 1000
+goto :checkgreg4
+:checkgregdone4
+set #Times 0
+
+:Loadingtime11187
+#Times = #Times + 1
+#Color = 0
+#Color1 = 0
+if #Times > 40
+	toast Error
+	goto :MG2
+endif
+getColor #Color #SHOP1 #SHOP2
+if #Color == #MAUSHOP or #Color == #MAUSHOP1
+	toast Qua Ok :D
+	sleep 10
+	sleep 100
+	goto :Set11178
+endif
+sleep 50
+goto :Loadingtime11187
+
+:Set11178
+//mua
+touchDown 0 175 299
+sleep 9
+touchUp 0
+sleep 6
+touchDown 0 181 374
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 243 304
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 252 379
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 310 303
+sleep 1
+touchUp 0
+sleep 9
+touchDown 0 320 379
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 375 299
+sleep 1
+touchUp 0
+sleep 6
+touchDown 0 375 375
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 441 302
+sleep 1
+touchUp 0
+sleep 4
+touchDown 0 445 371
+sleep 1
+touchUp 0
+touchDown 0 491 315
+sleep 1
+touchUp 0
+touchDown 0 484 391
+sleep 1
+touchUp 0
+sleep 500
+sleep 2000
+
+:HOME11
+set #Times 0
+sleep 1500
+#AA = 2
+RunApp com.supercell.hayday2
+toast HAYDAY2
+sleep 1000
+set #Times 0
+:Loadingtime343
+#Times = #Times + 1
+#Color = 0
+if #Times > 15
+	goto :Open
+endif
+getColor #Color #CLIKSHOP1 #CLIKSHOP2
+if #Color  == #MAUCLIKSHOP or #Color  == #MAUCLIKSHOP1
+	toast Mở Shop	
+	sleep 200
+	goto :shopdone16
+endif
+getColor #Color 401 17
+if #Color == #Cx1 or #Color  == #Cx2
+	toast OK!!
+	#Times = 0
+	sleep 500
+	goto :step33633
+endif
+goto :Loadingtime343
+:step33633
+
+:checkshopdone16
+touchDown 0 77 73
+sleep 40
+touchMove 0 1000 1000
+sleep 100
+touchUp 0
+sleep 200
+
+
+//clickshop
+sleep 300
+touchDown 0 4 258
+sleep 100
+touchUp 0
+touchDown 0 4 258
+sleep 100
+touchUp 0
+sleep 100
+sleep 200
+:BANTIEP
+set #Color 0
+set #Times 0
+#Times = #Times + 1
+if #Times > 18
+	toast Lỗi không mở được shop
+	goto :end
+endif
+getColor #Color #CLIKSHOP1 #CLIKSHOP2
+if #Color  == #MAUCLIKSHOP or #Color  == #MAUCLIKSHOP1
+	toast Mở Shop	
+	sleep 200
+	goto :shopdone16
+endif
+sleep 1000
+goto :checkshopdone16
+:shopdone16
+
+
+touchDown 0 175 300
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 175 300
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 254
+sleep 10
+touchUp 0
+sleep 100
+touchDown 0 200 254
+sleep 10
+touchUp 0
+sleep 100
+
+set #Times 0
+:LoadingtimeF1aa
+#Times = #Times + 1
+#Color = 0
+#Color1 = 0
+if #Times > 15
+	toast Error
+	goto :B1
+endif
+getColor #Color 460 305
+if #Color == 6942975 or #Color == 6877183
+           #Times = 0
+	toast Bán Tiếp
+	goto :Ga
+endif
+getColor #Color 460 305
+if #Color == -1710618
+           #Times = 0
+	toast HẾt
+	goto :B1
+endif
+sleep 1000
+goto :LoadingtimeF1aa
+
+:B1
+sleep 1000
+#AA = 2
+RunApp com.supercell.hayday1
+
+sleep 1000
+
+//go home
+
+sleep 300
+touchDown 0 562 189
+sleep 10
+touchUp 0
+sleep 10
+touchDown 0 562 189
+sleep 1
+touchUp 0
+sleep 10
+sleep 700
+sleep 300
+touchDown 0 32 606
+sleep 100
+touchUp 0
+touchDown 0 32 606
+sleep 100
+touchUp 0
+touchDown 0 32 606
+sleep 100
+touchUp 0
+sleep 700
+set #Times 0
+:Loadingtime41q
+#Times = #Times + 1
+#Color = 0
+if #Times > 40
+	goto :MG2
+endif
+getColor #Color 401 17
+if #Color == #Cx1 or #Color  == #Cx2
+	toast ve nha
+	#Times = 0
+	sleep 300
+	goto :step41q
+endif 
+goto :Loadingtime41q
+:step41q
+set #Times 0
+:DEL
+RunApp ru.xomka.haydaymanager
+#Lam = #Lam + 1
+:manger133
+#Times = #Times + 1
+#Color = 0
+if #Times > 20
+	goto :Open
+endif
+getColor #Color 409 43
+if #Color  == -7635616
+	toast mo mangar #Times3
+	#Times = 0
+	sleep 200
+	goto :manger1122
+endif
+sleep 100
+
+goto :manger133
+:manger1122
+sleep 100
+touchDown 0 208 44
+sleep 10
+touchUp 0
+sleep 100
+touchDown 0 208 44
+sleep 10
+touchUp 0
+sleep 100
+touchDown 0 168 99
+sleep 3000
+touchUp 0
+
+sleep 1000
+touchDown 0 154 365
+sleep 10
+touchUp 0
+sleep 1000
+touchDown 0 335 290
+sleep 10
+touchUp 0
+sleep 1500
+touchDown 0 489 352
+sleep 10
+touchUp 0
+
+sleep 1000
+set #Times 0
+set #Buy 0
+toast xóa Fram thứ #Lam
+if #Lam < #LamLol
+goto :Open
+endif
+set #Lam 1
+sleep 500
+RunApp ru.xomka.haydaymanager1
+touchDown 0 208 44
+sleep 10
+touchUp 0
+sleep 1000
+touchDown 0 208 44
+sleep 10
+touchUp 0
+sleep 1000
+
+touchDown 0 227 131
+sleep 10
+touchUp 0
+sleep 2000
+touchDown 0 499 361
+sleep 10
+touchUp 0
+sleep 300
+touchDown 0 499 361
+sleep 10
+touchUp 0
+sleep 10000
+goto :TT1
+
+
+///////////////////////////////////////////////
+:AAAA
+
+//go home
+sleep 300
+touchDown 0 562 189
+sleep 10
+touchUp 0
+sleep 10
+touchDown 0 562 189
+sleep 1
+touchUp 0
+touchDown 0 449 244
+sleep 1
+touchUp 0
+touchDown 0 449 244
+sleep 1
+touchUp 0
+touchDown 0 449 244
+sleep 1
+touchUp 0
+touchDown 0 449 244
+sleep 1
+touchUp 0
+sleep 10
+sleep 700
+sleep 300
+touchDown 0 32 606
+sleep 50
+touchUp 0
+touchDown 0 32 606
+sleep 50
+touchUp 0
+touchDown 0 32 606
+sleep 50
+touchUp 0
+sleep 700
+set #Times 0
+:Loadingtime4112
+#Times = #Times + 1
+#Color = 0
+if #Times > 40
+	goto :Open
+endif
+getColor #Color 401 17
+if #Color == #Cx1 or #Color  == #Cx2
+	toast ve nha
+	#Times = 0
+	sleep 500
+	goto :step41121
+endif
+goto :Loadingtime4112
+:step41121
+:checkshopdone7
+sleep 300
+touchDown 0 77 73
+sleep 40
+touchMove 0 1000 1000
+sleep 100
+touchUp 0
+sleep 200
+
+//clickshop
+sleep 300
+touchDown 0 4 258
+sleep 100
+touchUp 0
+sleep 100
+sleep 200
+
+set #Color 0
+set #Times 0
+#Times = #Times + 1
+if #Times > 18
+	toast Lỗi không mở được shop
+	goto :end
+endif
+getColor #Color #CLIKSHOP1 #CLIKSHOP2
+if #Color  == #MAUCLIKSHOP or #Color  == #MAUCLIKSHOP1
+	toast Mở Shop	
+	sleep 200
+	goto :shopdone7
+endif
+sleep 1000
+goto :checkshopdone7
+:shopdone7
+
+
+//ban80 xeng
+//S1
+touchDown 0 188 294
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 188 294
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 129 305
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 129 305
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 254
+sleep 10
+touchUp 0
+
+sleep 100
+touchDown 0 466 259
+sleep 10
+touchUp 0
+touchDown 0 466 259
+sleep 10
+touchUp 0
+touchDown 0 466 259
+sleep 10
+touchUp 0
+touchDown 0 466 259
+sleep 10
+touchUp 0
+touchDown 0 466 259
+sleep 10
+touchUp 0
+sleep 100
+
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+sleep 30
+touchDown 0 418 430
+sleep 50
+touchUp 0
+sleep #SH
+
+:Open2q
+set #Times 0
+toast farm 2
+sleep 1500
+#AA = 2
+RunApp com.supercell.hayday1
+sleep 500
+set #Times 0
+:Loadingtime2a
+#Times = #Times + 1
+#Color = 0
+if #Times > 40
+	goto :MG2
+endif
+getColor #Color #CLIKSHOP1 #CLIKSHOP2
+if #Color  == #MAUCLIKSHOP or #Color  == #MAUCLIKSHOP1
+	toast Mở Shop	
+	sleep 200
+	goto :shopdone8
+endif
+getColor #Color 401 17
+if #Color == #Cx1 or #Color  == #Cx2
+	toast vao xong
+	#Times = 0
+	sleep 300
+	goto :step2a1
+endif
+sleep 1500
+goto :Loadingtime2
+:step2a1
+:checkshopdone8
+sleep 300
+touchDown 0 77 73
+sleep 40
+touchMove 0 1000 1000
+sleep 100
+touchUp 0
+sleep 200
+
+//clickshop
+sleep 300
+touchDown 0 4 258
+sleep 100
+touchUp 0
+sleep 100
+sleep 200
+
+set #Color 0
+set #Times 0
+#Times = #Times + 1
+if #Times > 18
+	toast Lỗi không mở được shop
+	goto :end
+endif
+getColor #Color #CLIKSHOP1 #CLIKSHOP2
+if #Color  == #MAUCLIKSHOP or #Color  == #MAUCLIKSHOP1
+	toast Mở Shop	
+	sleep 200
+	goto :shopdone8
+endif
+sleep 1000
+goto :checkshopdone8
+:shopdone8
+
+
+set #Times 0
+:checkgreg5
+#Times = #Times + 1
+#Color = 0
+if #Times == 5 or #Times == 10
+	touchDown 0 320 200
+	sleep 1
+	touchUp 0
+	sleep 80
+elseif #Times == 40
+	toast Lỗi
+	goto :Open
+endif
+getRGB #red1 #green1 #blue1 145 210
+if #red1 > 195 and #red1 < 210
+	toast Sang Trái
+    sleep 100
+    touchDown 0 145 210
+    sleep 1
+    touchUp 0
+    sleep 200
+    touchDown 0 145 210
+    sleep 1
+    touchUp 0
+	goto :checkgregdone5
+endif
+getRGB #red1 #green1 #blue1 500 210
+if #red1 > 195 and #red1 < 210
+    toast Sang Phải
+    sleep 100
+    touchDown 0 500 210
+    sleep 1
+    touchUp 0
+    sleep 200
+    touchDown 0 500 210
+    sleep 1
+    touchUp 0
+	goto :checkgregdone5
+endif
+sleep 1000
+goto :checkgreg5
+:checkgregdone5
+
+
+set #Times 0
+:Loadingtime11166
+sleep 500
+#Times = #Times + 1
+#Color = 0
+#Color1 = 0
+if #Times > 40
+	toast Error
+	goto :MG2
+endif
+getColor #Color #SHOP1 #SHOP2
+if #Color == #MAUSHOP or #Color == #MAUSHOP1
+	toast Qua Ok :D
+	sleep 10
+	sleep 100
+	goto :Set11166
+endif
+sleep 1500
+goto :Loadingtime11166
+
+:Set11166
+//mua
+sleep 1000
+touchDown 0 175 299
+sleep 9
+touchUp 0
+sleep 6
+touchDown 0 181 374
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 243 304
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 252 379
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 310 303
+sleep 1
+touchUp 0
+sleep 9
+touchDown 0 320 379
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 375 299
+sleep 1
+touchUp 0
+sleep 6
+touchDown 0 375 375
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 441 302
+sleep 1
+touchUp 0
+sleep 4
+touchDown 0 445 371
+sleep 1
+touchUp 0
+touchDown 0 491 315
+sleep 1
+touchUp 0
+sleep 500
+sleep 2000
+//go home
+sleep 300
+touchDown 0 562 189
+sleep 10
+touchUp 0
+sleep 10
+touchDown 0 562 189
+sleep 1
+touchUp 0
+sleep 10
+sleep 700
+sleep 300
+touchDown 0 32 606
+sleep 50
+touchUp 0
+touchDown 0 32 606
+sleep 50
+touchUp 0
+touchDown 0 32 606
+sleep 50
+touchUp 0
+sleep 700
+set #Times 0
+:Loadingtime2a
+#Times = #Times + 1
+#Color = 0
+if #Times > 40
+	goto :MG2
+endif
+getColor #Color 401 17
+if #Color == #Cx1 or #Color  == #Cx2
+	toast vao xong
+	#Times = 0
+	sleep 300
+	goto :SSSS
+endif
+sleep 1500
+goto :Loadingtime2a
+
+///////////////////////////////////////////////
+:AAAA1
+set #Times 0
+//go home
+sleep 300
+touchDown 0 562 189
+sleep 10
+touchUp 0
+sleep 10
+touchDown 0 562 189
+sleep 1
+touchUp 0
+sleep 10
+sleep 700
+sleep 300
+touchDown 0 32 606
+sleep 50
+touchUp 0
+touchDown 0 32 606
+sleep 50
+touchUp 0
+touchDown 0 32 606
+sleep 50
+touchUp 0
+sleep 700
+
+:Loadingtime4112A1
+#Times = 0
+#Times = #Times + 1
+#Color = 0
+if #Times > 40
+	goto :Open
+endif
+getColor #Color 401 17
+if #Color == #Cx1 or #Color  == #Cx2
+	toast ve nha
+	#Times = 0
+	sleep 500
+	goto :step41121A1
+endif
+goto :Loadingtime4112A1
+:step41121A1
+
+//keo zoom
+:checkshopdone10
+sleep 300
+touchDown 0 77 73
+sleep 40
+touchMove 0 1000 1000
+sleep 100
+touchUp 0
+sleep 200
+
+//clickshop
+sleep 300
+touchDown 0 4 258
+sleep 100
+touchUp 0
+sleep 100
+sleep 200
+
+set #Color 0
+set #Times 0
+#Times = #Times + 1
+if #Times > 18
+	toast Lỗi không mở được shop
+	goto :end
+endif
+getColor #Color #CLIKSHOP1 #CLIKSHOP2
+if #Color  == #MAUCLIKSHOP or #Color  == #MAUCLIKSHOP1
+	toast Mở Shop	
+	sleep 200
+	goto :shopdone10
+endif
+sleep 1000
+goto :checkshopdone10
+:shopdone10
+
+
+//ban80 xeng
+//S1
+sleep 500
+touchDown 0 188 294
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 188 294
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 129 305
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 129 305
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 254
+sleep 10
+touchUp 0
+
+sleep 100
+touchDown 0 466 259
+sleep 10
+touchUp 0
+touchDown 0 466 259
+sleep 10
+touchUp 0
+touchDown 0 466 259
+sleep 10
+touchUp 0
+touchDown 0 466 259
+sleep 10
+touchUp 0
+touchDown 0 466 259
+sleep 10
+touchUp 0
+sleep 100
+
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+sleep 30
+touchDown 0 418 430
+sleep 50
+touchUp 0
+sleep #SH
+
+sleep 300 
+touchDown 0 551 11
+sleep 1
+touchUp 0
+sleep 300 
+touchDown 0 551 11
+sleep 1
+touchUp 0
+touchDown 0 551 11
+sleep 1
+touchUp 0
+touchDown 0 551 11
+sleep 1
+touchUp 0
+sleep 300
+touchDown 0 561 188
+sleep 1
+touchUp 0
+sleep 300
+touchDown 0 561 188
+sleep 1
+touchUp 0
+sleep 500
+
+:Open2qA1
+set #Times 0
+toast farm 2
+sleep 1500
+#AA = 2
+RunApp com.supercell.hayday1
+sleep 500
+
+sleep 300 
+touchDown 0 551 11
+sleep 1
+touchUp 0
+sleep 300 
+touchDown 0 551 11
+sleep 1
+touchUp 0
+touchDown 0 551 11
+sleep 1
+touchUp 0
+touchDown 0 551 11
+sleep 1
+touchUp 0
+touchDown 0 551 11
+sleep 1
+touchUp 0
+sleep 500
+set #Times 0
+:Loadingtime2aA1
+#Times = #Times + 1
+#Color = 0
+if #Times > 40
+	goto :MG2
+endif
+getColor #Color 401 17
+if #Color == #Cx1 or #Color  == #Cx2
+	toast vao xong
+	#Times = 0
+	sleep 300
+	goto :step2a1A1
+endif
+sleep 1500
+goto :Loadingtime2aA1
+:step2a1A1
+//keo zoom
+:checkshopdone11
+sleep 300
+touchDown 0 77 73
+sleep 40
+touchMove 0 1000 1000
+sleep 100
+touchUp 0
+sleep 200
+
+//clickshop
+sleep 300
+touchDown 0 4 258
+sleep 100
+touchUp 0
+sleep 100
+sleep 200
+
+set #Color 0
+set #Times 0
+#Times = #Times + 1
+if #Times > 18
+	toast Lỗi không mở được shop
+	goto :end
+endif
+getColor #Color #CLIKSHOP1 #CLIKSHOP2
+if #Color  == #MAUCLIKSHOP or #Color  == #MAUCLIKSHOP1
+	toast Mở Shop	
+	sleep 200
+	goto :shopdone11
+endif
+sleep 1000
+goto :checkshopdone11
+:shopdone11
+
+
+
+
+set #Times 0
+:checkgreg6
+#Times = #Times + 1
+#Color = 0
+if #Times == 5 or #Times == 10
+	touchDown 0 320 200
+	sleep 1
+	touchUp 0
+	sleep 80
+elseif #Times == 40
+	toast Lỗi
+	goto :Open
+endif
+getRGB #red1 #green1 #blue1 145 210
+if #red1 > 195 and #red1 < 210
+	toast Sang Trái
+    sleep 100
+    touchDown 0 145 210
+    sleep 1
+    touchUp 0
+    sleep 200
+    touchDown 0 145 210
+    sleep 1
+    touchUp 0
+	goto :checkgregdone6
+endif
+getRGB #red1 #green1 #blue1 500 210
+if #red1 > 195 and #red1 < 210
+    toast Sang Phải
+    sleep 100
+    touchDown 0 500 210
+    sleep 1
+    touchUp 0
+    sleep 200
+    touchDown 0 500 210
+    sleep 1
+    touchUp 0
+	goto :checkgregdone6
+endif
+sleep 1000
+goto :checkgreg6
+:checkgregdone6
+
+set #Times 0
+:Loadingtime11166A1
+sleep 500
+#Times = #Times + 1
+#Color = 0
+#Color1 = 0
+if #Times > 40
+	toast Error
+	goto :MG2
+endif
+getColor #Color #SHOP1 #SHOP2
+if #Color == #MAUSHOP or #Color == #MAUSHOP1
+	toast Qua Ok :D
+	sleep 10
+	sleep 100
+	goto :Set11166A1
+endif
+sleep 1500
+goto :Loadingtime11166A1
+
+:Set11166A1
+//mua
+sleep 1000
+touchDown 0 175 299
+sleep 9
+touchUp 0
+sleep 6
+touchDown 0 181 374
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 243 304
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 252 379
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 310 303
+sleep 1
+touchUp 0
+sleep 9
+touchDown 0 320 379
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 375 299
+sleep 1
+touchUp 0
+sleep 6
+touchDown 0 375 375
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 441 302
+sleep 1
+touchUp 0
+sleep 4
+touchDown 0 445 371
+sleep 1
+touchUp 0
+touchDown 0 491 315
+sleep 1
+touchUp 0
+sleep 500
+sleep 2000
+//go home
+sleep 300
+touchDown 0 562 189
+sleep 10
+touchUp 0
+sleep 10
+touchDown 0 562 189
+sleep 1
+touchUp 0
+sleep 10
+sleep 700
+sleep 300
+touchDown 0 32 606
+sleep 50
+touchUp 0
+touchDown 0 32 606
+sleep 50
+touchUp 0
+touchDown 0 32 606
+sleep 50
+touchUp 0
+sleep 700
+set #Times 0
+:Load1
+#Times = #Times + 1
+#Color = 0
+if #Times > 40
+	goto :MG2
+endif
+getColor #Color 401 17
+if #Color == #Cx1 or #Color  == #Cx2
+	toast vao xong
+	#Times = 0
+	sleep 300
+	goto :SSSS1
+endif
+sleep 1500
+goto :Load1
+
+////////////////////
+:Ga
+touchDown 0 511 352
+sleep 0
+touchUp 0
+sleep 100
+touchDown 0 511 352
+sleep 0
+touchUp 0
+sleep 100
+touchDown 0 511 352
+sleep 0
+touchUp 0
+sleep 100
+
+//ban80 xeng
+goto :TrayD
+:TrayD
+touchDown 0 460 204
+sleep 1
+touchUp 0
+sleep 1
+touchDown 0 460 204
+sleep #AA
+touchUp 0
+sleep #BB
+if #TrayD == 0
+goto :TrayD0
+elseif #TrayD == 1
+goto :TrayD1
+elseif #TrayD == 2
+goto :TrayD2
+elseif #TrayD == 3
+goto :TrayD3
+elseif #TrayD == 4
+goto :TrayD4
+elseif #TrayD == 5
+goto :TrayD5
+elseif #TrayD == 6
+goto :TrayD6
+elseif #TrayD == 7
+goto :TrayD7
+elseif #TrayD == 8
+goto :TrayD8
+elseif #TrayD == 9
+goto :TrayD9
+elseif #TrayD == 10
+goto :TrayD10
+elseif #TrayD == 11
+goto :TrayD11
+endif
+set #TrayD 0
+goto :HAYDAYFRAM1
+:Put1
+sleep #BB
+touchDown 0 132 315
+sleep 1
+touchUp 0
+sleep 1
+//Local
+sleep #BB
+touchDown 0 200 255
+sleep #AA
+touchUp 0
+sleep #BB
+touchDown 0 460 268
+sleep 1
+touchUp 0
+touchDown 0 460 268
+sleep 1
+touchUp 0
+touchDown 0 460 268
+sleep 1
+touchUp 0
+touchDown 0 460 268
+sleep 1
+touchUp 0
+touchDown 0 460 268
+sleep 1
+touchUp 0
+
+sleep 50
+if #Price1 == 1
+touchDown 0 398 325
+sleep #AA
+touchUp 0
+sleep 50
+elseif #Price1 == 2
+touchDown 0 438 328
+sleep #AA
+touchUp 0
+sleep 50
+endif
+touchDown 0 412 433
+sleep #AA
+touchUp 0
+sleep 50
+touchDown 0 514 289
+sleep #AA
+touchUp 0
+sleep #BB
+touchDown 0 514 289
+sleep #AA
+touchUp 0
+sleep #BB
+
+goto :TrayD
+:TrayD0
+#TrayD = #TrayD + 1
+touchDown 0 444 381
+sleep #AA
+touchUp 0
+sleep #BB
+touchDown 0 444 381
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put1
+:TrayD1
+#TrayD = #TrayD + 1
+touchDown 0 377 358
+sleep #AA
+touchUp 0
+sleep #AA
+touchDown 0 377 358
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put1
+:TrayD2
+#TrayD = #TrayD + 1
+touchDown 0 311 377
+sleep #AA
+touchUp 0
+sleep #AA
+touchDown 0 311 377
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put1
+:TrayD3
+#TrayD = #TrayD + 1
+touchDown 0 245 377
+sleep #AA
+touchUp 0
+sleep #AA
+touchDown 0 245 377
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put1
+:TrayD4
+#TrayD = #TrayD + 1
+touchDown 0 175 377
+sleep #AA
+touchUp 0
+sleep #AA
+touchDown 0 175 377
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put1
+:TrayD5
+#TrayD = #TrayD + 1
+touchDown 0 175 307
+sleep #AA
+touchUp 0
+sleep #AA
+touchDown 0 175 307
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put1
+:TrayD6
+#TrayD = #TrayD + 1
+touchDown 0 244 307
+sleep #AA
+touchUp 0
+sleep #AA
+touchDown 0 244 307
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put1
+:TrayD7
+#TrayD = #TrayD + 1
+touchDown 0 310 308
+sleep #AA
+touchUp 0
+sleep #AA
+touchDown 0 310 308
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put1
+:TrayD8
+#TrayD = #TrayD + 1
+touchDown 0 379 308
+sleep #AA
+touchUp 0
+sleep #AA
+touchDown 0 379 308
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put1
+:TrayD9
+#TrayD = #TrayD + 1
+touchDown 0 444 306
+sleep #AA
+touchUp 0
+sleep #AA
+touchDown 0 444 306
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put1
+
+:TrayD10
+#TrayD = #TrayD + 1
+touchDown 0 484 314
+sleep #AA
+touchUp 0
+sleep #AA
+touchDown 0 484 314
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put1
+
+:TrayD11
+#TrayD = #TrayD + 1
+touchDown 0 484 391
+sleep #AA
+touchUp 0
+sleep #AA
+touchDown 0 484 391
+sleep #AA
+touchUp 0
+sleep #BB
+goto :Put1
+:HAYDAYFRAM1
+set #Times 0
+sleep 500
+#AA = 2
+RunApp com.supercell.hayday1
+sleep 500 
+touchDown 0 511 352
+sleep 0
+touchUp 0
+sleep 100
+touchDown 0 511 352
+sleep 0
+touchUp 0
+sleep 500
+:Loadingtime111
+sleep 500
+#Times = #Times + 1
+#Color = 0
+#Color1 = 0
+if #Times > 40
+	toast Error
+	goto :MG2
+endif
+getColor #Color #SHOP1 #SHOP2
+if #Color == #MAUSHOP or #Color == #MAUSHOP1
+	toast Qua Ok :D
+	sleep 10
+	sleep 100
+	goto :Set111
+endif
+getColor #Color #CLIKSHOP1 #CLIKSHOP2
+if #Color == #MAUCLIKSHOP
+	toast Qua Ok :D
+	sleep 10
+	sleep 100
+	goto :Set111
+endif
+
+	sleep 1500
+	//keo zoom
+touchDown 0 77 73
+sleep 40
+touchMove 0 1000 1000
+sleep 100
+touchUp 0
+sleep 200
+
+//clickshop
+sleep 300
+touchDown 0 4 258
+sleep 100
+touchUp 0
+sleep 100
+sleep 200
+
+goto :Loadingtime111
+
+:Set111
+//mua
+touchDown 0 175 299
+sleep 9
+touchUp 0
+sleep 6
+touchDown 0 181 374
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 243 304
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 252 379
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 310 303
+sleep 1
+touchUp 0
+sleep 9
+touchDown 0 320 379
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 375 299
+sleep 1
+touchUp 0
+sleep 6
+touchDown 0 375 375
+sleep 1
+touchUp 0
+sleep 5
+touchDown 0 441 302
+sleep 1
+touchUp 0
+sleep 4
+touchDown 0 445 371
+sleep 1
+touchUp 0
+touchDown 0 491 315
+sleep 1
+touchUp 0
+touchDown 0 484 391
+sleep 1
+touchUp 0
+sleep 500
+sleep 2000
+set #Times 0
+sleep 500
+#AA = 2
+RunApp com.supercell.hayday2
+toast HAYDAY2 
+sleep 2000
+goto :BANTIEP
+
+:MLAI
+#MLAI = #MLAI + 1
+if #MLAI == 2
+	goto :full1
+endif
+:checkshopdone9
+//keo zoom
+sleep 300
+touchDown 0 77 73
+sleep 40
+touchMove 0 1000 1000
+sleep 100
+touchUp 0
+sleep 200
+
+//clickshop
+sleep 300
+touchDown 0 4 258
+sleep 100
+touchUp 0
+sleep 100
+sleep 200
+
+set #Color 0
+set #Times 0
+#Times = #Times + 1
+if #Times > 18
+	toast Lỗi không mở được shop
+	goto :end
+endif
+getColor #Color #CLIKSHOP1 #CLIKSHOP2
+if #Color  == #MAUCLIKSHOP or #Color  == #MAUCLIKSHOP1
+	toast Mở Shop	
+	sleep 200
+	goto :shopdone9
+endif
+sleep 1000
+goto :checkshopdone9
+:shopdone9
+set #Times 0
+:Loadingtime1112
+sleep 500
+#Times = #Times + 1
+#Color = 0
+#Color1 = 0
+if #Times > 40
+	toast Error
+	goto :Open
+endif
+getColor #Color 583 188
+if #Color == -2754049
+	toast OK Mo SHoP
+	sleep 10
+	sleep 100
+	goto :Set1112
+endif
+sleep 1500
+goto :Loadingtime1112
+
+:Set1112
+
+
+:ok1a1e
+sleep 2000
+touchDown 0 445 305
+sleep 10
+touchUp 0
+
+sleep 2000
+touchDown 0 320 408
+sleep 100
+touchUp 0
+:AAAAUP
+#AAAAUP = #AAAAUP + 1
+if #AAAAUP == 2
+	toast  Toang !!!!!!!!!!!!!!!
+	goto :AAAA
+endif
+//up1
+sleep 1500
+touchDown 0 403 348
+sleep 100
+touchUp 0
+
+//tat kho
+sleep 500
+touchDown 0 448 243
+sleep 1
+touchUp 0
+
+//keo zoom
+sleep 500
+touchDown 0 77 73
+sleep 400
+touchMove 0 1000 1000
+sleep 500
+touchUp 0
+sleep 200
+touchDown 0 77 73
+sleep 400
+touchMove 0 1000 1000
+sleep 500
+touchUp 0
+sleep 200
+
+//clickshop
+sleep 300
+touchDown 0 4 258
+sleep 100
+touchUp 0
+sleep 100
+sleep 200
+
+goto :quamua1
+///////////////////////
+
+//////////////////////////////////////////////
+:MG2
+RunApp ru.xomka.haydaymanager1
+#Times3 = #Times3 + 1
+sleep 3000
+touchDown 0 208 44
+sleep 1
+touchUp 0
+sleep 100
+touchDown 0 208 44
+sleep 1
+touchUp 0
+sleep 300
+touchDown 0 208 44
+sleep 1
+touchUp 0
+sleep 100
+touchDown 0 208 44
+sleep 1
+touchUp 0
+sleep 1000
+touchDown 0 227 95
+sleep 10
+touchUp 0
+sleep 2000
+touchDown 0 499 361
+sleep 10
+touchUp 0
+sleep 300
+touchDown 0 499 361
+sleep 10
+touchUp 0
+set #Times 0
+:LoadingtimeAMG2
+#Times = #Times + 1
+#Color = 0
+#Color1 = 0
+if #Times > 120
+	goto :MG2
+endif
+getColor #Color 401 17
+if #Color == #Cx1 or #Color  == #Cx2
+	toast FaceBook THỊNH NGUYỄN HAYDAY #Times3
+	goto :TT1
+endif
+sleep 500
+goto :LoadingtimeAMG2
+/////////////////////////////////////////////////////////////////////////
+
+:checkshopdone12
+sleep 300
+touchDown 0 77 73
+sleep 40
+touchMove 0 1000 1000
+sleep 100
+touchUp 0
+sleep 200
+
+//clickshop
+sleep 300
+touchDown 0 4 258
+sleep 100
+touchUp 0
+sleep 100
+sleep 200
+:BANLAI
+
+
+set #Color 0
+set #Times 0
+#Times = #Times + 1
+if #Times > 18
+	toast Lỗi không mở được shop
+	goto :end
+endif
+getColor #Color #CLIKSHOP1 #CLIKSHOP2
+if #Color  == #MAUCLIKSHOP or #Color  == #MAUCLIKSHOP1
+	toast Mở shop 12
+	sleep 200
+	goto :shopdone12
+endif
+sleep 1000
+goto :checkshopdone12
+:shopdone12
+//ban10 xeng
+//keo shop
+#BANLAI = #BANLAI +1
+if #BANLAI == 5
+	goto :HETBARN
+endif
+sleep 300
+touchDown  0 476 426
+sleep 200
+touchMove 0 135 426
+sleep 800
+touchUp 0
+sleep 1500
+
+//ban89 barn
+sleep 300
+touchDown 0 190 305
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 190 305
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 129 305
+sleep 10
+touchUp 0
+sleep 300
+touchDown 0 200 254
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+sleep 30
+touchDown 0 418 430
+sleep 0
+touchUp 0
+touchDown 0 445 206
+sleep 1
+touchUp 0
+touchDown 0 445 206
+sleep 1
+touchUp 0
+touchDown 0 445 206
+sleep 1
+touchUp 0
+touchDown 0 445 206
+sleep 1
+touchUp 0
+// barn
+sleep 1000
+//S1
+touchDown 0 200 370
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 370
+sleep 10
+touchUp 0
+sleep #SH
+sleep 300
+touchDown 0 129 305
+sleep 10
+touchUp 0
+sleep 300
+touchDown 0 305 380
+sleep 10
+touchUp 0
+sleep 50
+touchDown 0 370 261
+sleep 1
+touchUp 0
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+sleep 30
+touchDown 0 418 430
+sleep 50
+touchUp 0
+
+
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+//S2
+touchDown 0 265 290
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 265 290
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 255 380
+sleep 10
+touchUp 0
+sleep 50
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+sleep 30
+touchDown 0 418 430
+sleep 50
+touchUp 0
+
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+//S3
+touchDown 0 265 370
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 265 370
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 380
+sleep 10
+touchUp 0
+
+sleep 50
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+sleep 30
+touchDown 0 418 430
+sleep 50
+touchUp 0
+sleep #SH
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+//S4
+touchDown 0 335 290
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 335 290
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 305 380
+sleep 10
+touchUp 0
+
+
+sleep 50
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+sleep 30
+touchDown 0 418 430
+sleep 50
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+//S5
+touchDown 0 335 370
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 335 370
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 255 380
+sleep 10
+touchUp 0
+sleep 50
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+sleep 30
+touchDown 0 418 430
+sleep 50
+touchUp 0
+sleep #SH
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+//S6
+touchDown 0 400 290
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 400 290
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 380
+sleep 10
+touchUp 0
+
+sleep 50
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+sleep 30
+touchDown 0 418 430
+sleep 50
+touchUp 0
+sleep #SH
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+//S7
+touchDown 0 400 370
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 400 370
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 305 380
+sleep 10
+touchUp 0
+
+sleep 50
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+sleep 30
+touchDown 0 418 430
+sleep 50
+touchUp 0
+sleep #SH
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+//S8
+touchDown 0 470 290
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 470 290
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 255 380
+sleep 10
+touchUp 0
+
+sleep 50
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+sleep 30
+touchDown 0 418 430
+sleep 50
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+//S9
+touchDown 0 459 375
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 459 375
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 200 380
+sleep 10
+touchUp 0
+
+sleep 50
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+touchDown 0 465 261
+sleep 1
+touchUp 0
+
+sleep #SH
+touchDown 0 395 325
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 418 430
+sleep 0
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+sleep #SH
+touchDown 0 455 205
+sleep 10
+touchUp 0
+goto :CHECK89
+:TT1
+RunApp com.supercell.hayday1
+:LoadingTimeTag
+getColor #Color 401 17
+if #Color == #Cx1 or #Color  == #Cx2
+toast Success
+goto :Tag
+if #Times > 60
+	toast Error !!
+	goto :Tag
+endif
+#Times = #Times + 1
+sleep 1000 
+sleep 300 
+touchDown 0 551 11
+sleep 1
+touchUp 0
+sleep 300 
+touchDown 0 551 11
+sleep 1
+touchUp 0
+goto :LoadingTimeTag
+:Tag
+touchDown 0 621 618
+sleep 1
+touchUp 0
+sleep 1000
+touchDown 0 255 601
+sleep 1
+touchUp 0
+sleep 1200
+
+touchDown 0 294 271
+sleep 1
+touchUp 0
+touchDown 0 294 271
+sleep 1
+touchUp 0
+touchDown 0 294 271
+sleep 1
+touchUp 0
+sleep 100
+touchDown 0 507 164
+sleep 1
+touchUp 0
+sleep 100
+touchDown 0 620 542
+sleep 1
+touchUp 0
+touchDown 0 620 542
+sleep 1
+touchUp 0
+touchDown 0 620 542
+sleep 1
+touchUp 0
+sleep 1000
+goto :Open
+:Key1
+sleep 700
+keyDown K_DEL
+sleep 100
+keyUp K_DEL
+sleep 100
+keyDown K_CTRL_LEFT
+sleep 500
+keyDown K_V
+sleep 500
+keyUp K_V
+sleep 500
+keyUp K_CTRL_LEFT
+sleep 500
+goto :Key11
+:ExloreKS
+RunApp com.speedsoftware.rootexplorer
+sleep 2000
+touchDown 0 75 80
+sleep 1
+touchUp 0
+sleep 250
+sleep 1000
+touchDown 0 617 46
+sleep 1
+touchUp 0
+sleep 1000
+touchDown 0 512 188
+sleep 1
+touchUp 0
+sleep 200
+sleep 1000
+touchDown 0 60 160
+sleep 2000
+touchUp 0
+sleep 1000
+touchDown 0 549 44
+sleep 1
+touchUp 0
+sleep 1000
+touchDown 0 395 80
+sleep 1
+touchUp 0
+sleep 1000
+sleep 200
+touchDown 0 555 80
+sleep 1
+touchUp 0
+sleep 100
+sleep 1500
+touchDown 0 602 548
+sleep 1
+touchUp 0
+sleep 3000
+RunApp ru.xomka.haydaymanager
+sleep 3000
+touchDown 0 303 42
+sleep 1
+touchUp 0
+touchDown 0 303 42
+sleep 1
+touchUp 0
+touchDown 0 303 42
+sleep 1
+touchUp 0
+touchDown 0 303 42
+sleep 1
+touchUp 0
+
+sleep 3000
+touchDown 0 27 44
+sleep 1
+touchUp 0
+sleep 1500
+touchDown 0 72 198
+sleep 1
+touchUp 0
+sleep 1500
+:Exlore14
+RunApp com.speedsoftware.rootexplorer
+sleep 2000
+touchDown 0 75 80
+sleep 1
+touchUp 0
+touchDown 0 75 80
+sleep 1
+touchUp 0
+sleep 250
+sleep 1000
+touchDown 0 617 46
+sleep 1
+touchUp 0
+sleep 1000
+touchDown 0 512 188
+sleep 1
+touchUp 0
+sleep 200
+sleep 1000
+touchDown 0 60 160
+sleep 2000
+touchUp 0
+sleep 1000
+touchDown 0 549 44
+sleep 1
+touchUp 0
+sleep 1000
+touchDown 0 395 80
+sleep 1
+touchUp 0
+sleep 200
+touchDown 0 400 80
+sleep 1
+touchUp 0
+sleep 100
+sleep 1500
+touchDown 0 602 548
+sleep 1
+touchUp 0
+sleep 3000
+RunApp ru.xomka.haydaymanager
+sleep 3000
+touchDown 0 303 42
+sleep 1
+touchUp 0
+touchDown 0 303 42
+sleep 1
+touchUp 0
+touchDown 0 303 42
+sleep 1
+touchUp 0
+touchDown 0 303 42
+sleep 1
+touchUp 0
+
+sleep 3000
+touchDown 0 27 44
+sleep 1
+touchUp 0
+sleep 1500
+touchDown 0 72 198
+sleep 1
+touchUp 0
+sleep 1500
+goto :Open
+
+:CHECKKHOA14
+:LoadingtimeAExlore14
+sleep 500
+touchDown 0 317 407
+sleep 1
+touchUp 0
+touchDown 0 317 407
+sleep 1
+touchUp 0
+sleep 500
+set #Times 0
+
+#Times = #Times + 1
+#Color = 0
+#Color1 = 0
+if #Times > 15
+	goto :DEL
+endif
+getColor #Color 391 465
+if #Color == -2754049
+	toast  Khóa CMN 14D Rùi :D
+	#Times = 0
+	goto :Exlore14
+endif
+sleep 500
+goto :LoadingtimeAExlore14
+
+:AAAA123
+sleep 1500
+#AA = 2
+RunApp com.supercell.hayday1
+
+
+set #Times 0
+:Loadingtime41123213DA
+#Times = #Times + 1
+#Color = 0
+if #Times > 40
+	goto :end
+endif
+getColor #Color #CLIKSHOP1 #CLIKSHOP2
+if #Color  == #MAUCLIKSHOP or #Color  == #MAUCLIKSHOP1
+	toast Mở shop
+	sleep 200
+	goto :shop123
+endif
+getColor #Color 401 17
+if #Color == #Cx1 or #Color  == #Cx2
+	toast ve nha
+	#Times = 0
+	sleep 500
+	goto :SSSS
+endif
+sleep 1500
+goto :Loadingtime41123213DA
+
+
+:HETBARN
+toast hết Barn
+goto :HETBARN
+
+
+
+:end
+
+
